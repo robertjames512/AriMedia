@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<head>
+	<title>Ari Media</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Robert James">
+	<meta name="description" content="Ari media website"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	<header>
+		<div class="logo">
+			<a href="index.html"><img src="img/ariLogo2.JPG" title="Magnetic" alt="Magnetic" " style="margin-right: 200px"/></a>
+		</div><!-- end logo -->
+
+		<div id="menu_icon"></div>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="selected">Home</a></li>
+				<li><a href="About.html">About</a></li>
+				<li><a href="services.html">Our Services</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				
+			</ul>
+		</nav><!-- end navigation menu -->
+
+		<div class="footer clearfix">
+			<ul class="social clearfix">
+				<li><a href="#" class="fb" data-title="Facebook"></a></li>
+				<li><a href="#" class="google" data-title="Google +"></a></li>
+				<li><A HREF="www.instagram.com" class="dribble" data-title="Instagram"><IMG BORDER="0" SRC="img/instagramIcon.png" style="width: 32px; height: 30px; "></A></li>
+<!-- 				<li><a href="#" class="behance" data-title="Behance"></a></li> -->
+				<!--<li><a href="#" class="twitter" data-title="Twitter"></a></li>
+				<li><a href="#" class="dribble" data-title="Dribble"></a></li>-->
+<!-- 				<li><a href="#" class="rss" data-title="RSS"></a></li> -->
+			</ul><!-- end social -->
+
+			<div class="rights">
+				<p>Copyright ©2016 Ari Media</p>
+				<p>Site By <a href="">Robert James</a></p>
+			</div><!-- end rights -->
+		</div ><!-- end footer -->
+	</header><!-- end header -->
+
+	<section class="main clearfix">
+<!-- 		<div class="work"> -->
+<!-- 			<a href="inner.html"> -->
+<!-- 				<img src="img/FullSizeRender.jpg" class="media" alt=""/> -->
+<!-- 				<div class="caption"> -->
+<!-- 					<div class="work_title"> -->
+<!-- 						<h1>Curly Haired Model headshot</h1> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</a> -->
+<!-- 		</div> -->
+
+		<div class"">
+<div class="w3-content w3-display-container" style="max-width:820px">
+  <img class="mySlides" src="img/roseMan.jpeg" style="width:100%">
+  <img class="mySlides" src="img/Nakia.JPG" style="width:106%">
+  <img class="mySlides" src="img/NaturalHair.JPG" style="width:108%">
+  <img class="mySlides" src="img/spaceMan.jpeg" style="width:99%">
+  <img class="mySlides" src="img/FullSizeRender.jpg" style="width:100%">
+  <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width:100%">
+    <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+  </div>
+</div>
+		</div>
+
+
+
+	</section><!-- end main -->
+	<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+</body>
+</html>
